@@ -1,6 +1,17 @@
 import time
 from SimpleCV import Camera
+from flask import Flask, request
 
+
+app = Flask(__name__)
+
+@app.route('/start', methods=['POST'])
+def result():
+    print(request.form['foo']) # should display 'bar'
+    return 'Start !' # response to your request.
+
+
+app.run(host= 'localhost', port= '8000')
 
 cam = Camera()
 time.sleep(0.1)  # If you don't wait, the image will be dark
