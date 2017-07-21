@@ -80,7 +80,7 @@ if __name__ == '__main__':
 
 		url = '10.42.0.' + str(int(data["cam"]["id"]) + 100)
 
-		app.run(host= 'url', port= '8000')
+		app.run(host= url, port= '8000')
 
 	except KeyboardInterrupt, SystemExit:
 		continueFlag = False
