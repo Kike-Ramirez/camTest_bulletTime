@@ -53,20 +53,20 @@ def t_getFrames():
 		print 'Tomada foto: ' + str(num)
 
 
-@app.route('/get/<number>', methods=['POST'])
-def getFrameNum( number ):
+# @app.route('/get/<number>', methods=['POST'])
+# def getFrameNum( number ):
 
-	onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+# 	onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
-	tempFileObj = NamedTemporaryFile(mode='w+b',suffix='png')
+# 	tempFileObj = NamedTemporaryFile(mode='w+b',suffix='png')
 
-	for file in onlyfiles:
+# 	for file in onlyfiles:
 
-		print file
-		if file == str(num) + '_picture.png':
-	   		response = send_file(tempFileObj, as_attachment=True, attachment_filename=file)
-	   		print 'File sent'
-    		return response
+# 		print file
+# 		if file == str(num) + '_picture.png':
+# 	   		response = send_file(tempFileObj, as_attachment=True, attachment_filename=file)
+# 	   		print 'File sent'
+#     		return response
 
 
 
